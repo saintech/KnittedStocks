@@ -37,18 +37,12 @@ local function init()
 	require(ServerScriptService.ExternalServerScripts.KnittedStocks.Components.ServerPlayerStateCmpt)
 	require(ServerScriptService.ExternalServerScripts.KnittedStocks.Components.PersistentPlayerStateCmpt)
 	
-	-- add required tags
+	-- add required Player tag
 	for i, player in ipairs(Players:GetPlayers()) do
 		CollectionService:AddTag(player, "Player")
 	end
 	Players.PlayerAdded:Connect(function(player)
 		CollectionService:AddTag(player, "Player")
-		if player.Character then
-			CollectionService:AddTag(player.Character, "Character")
-		end
-		player.CharacterAdded:Connect(function(char)
-			CollectionService:AddTag(char, "Character")
-		end)
 	end)
 end
 
