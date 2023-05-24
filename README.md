@@ -21,7 +21,7 @@ local Players = game:GetService("Players")
 local CollectionService = game:GetService("CollectionService")
 local Knit = require(ReplicatedStorage.ExternalReplicatedScripts.Knit.Knit)
 local KnittedStocksConfig = require(ServerScriptService.ExternalServerScripts.KnittedStocks.Config)
-local ServerConfig = require(ServerScriptService.CoreServerScripts.ServerConfig)
+local ServerConfig = require(ServerScriptService.ServerConfig)
 
 -- configure KnittedStocks
 KnittedStocksConfig.Knit = ReplicatedStorage.ExternalReplicatedScripts.Knit
