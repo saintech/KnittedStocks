@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: |
           mkdir -p ~/build
-          rojo build -o ~/build/KnittedStocks.rbxm
+          rojo build -o KnittedStocks.rbxm
 
       - name: Create release
         id: create_release
@@ -36,6 +36,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ~/build/KnittedStocks.rbxm
+          asset_path: KnittedStocks.rbxm
           asset_name: KnittedStocks.rbxm
           asset_content_type: application/octet-stream
