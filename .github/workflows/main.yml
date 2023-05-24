@@ -5,7 +5,7 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,8 +21,21 @@ jobs:
           mkdir -p ~/build
           rojo build -o ~/build/KnittedStocks.rbxm
 
-      - name: Upload build
-        uses: actions/upload-artifact@v2
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: build
-          path: ~/build/KnittedStocks.rbxm
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+
+      - name: Upload Asset
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ~/build/KnittedStocks.rbxm
+          asset_name: KnittedStocks.rbxm
+          asset_content_type: application/octet-stream
