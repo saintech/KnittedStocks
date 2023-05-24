@@ -1,6 +1,9 @@
 # KnittedStocks
 Roblox global state management modules for projects that use Knit framework
 
+## Download
+https://github.com/saintech/KnittedStocks/releases/latest
+
 ## Dependencies
 * [Knit](https://github.com/Sleitnick/Knit) framework
 * [ProfileService](https://github.com/MadStudioRoblox/ProfileService/) for storing per-player persistent state
