@@ -5,7 +5,7 @@ Roblox global state management modules for projects that use Knit framework
 * [Knit](https://github.com/Sleitnick/Knit) framework
 * [ProfileService](https://github.com/MadStudioRoblox/ProfileService/) for storing per-player persistent state
 
-All dependencies chould be setted using Config script, see example below.
+All dependencies should be setted using Config script, see example below.
 
 ## Using
 
