@@ -1,4 +1,4 @@
-name : MockDataStoreService release
+name : Release
 on:
   push:
     tags:
