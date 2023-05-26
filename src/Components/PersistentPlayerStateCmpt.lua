@@ -110,6 +110,13 @@ function module:Construct()
 	end
 end
 
+function module:MaintainData(updateFn)
+	if not self._profile then
+		self._isReady:Wait()
+	end
+	self._profile.Data = updateFn(self._profile.Data)
+end
+
 function module:WipeAndKick()
 	local player = self.Instance
 	local key = tostring(player.UserId)
