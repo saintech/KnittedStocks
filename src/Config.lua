@@ -1,6 +1,11 @@
 local module = {
 	Knit = "REQUIRED!",
 	ProfileService = "REQUIRED!",
+	CmptExtensions = {
+		ClientPlayerState = nil,
+		PersistentPlayerState = nil,
+		ServerPlayerState = nil,
+	},
 	InitState = {
 		Client = {
 			Player = { -- self:GetComponent(ClientPlayerStateCmpt)

@@ -49,6 +49,7 @@ local TableUtil = require(Config.Knit.TableUtil)
 local module = Component.new({
 	Tag = "Player",
 	Ancestors = {Players},
+	Extensions = Config.CmptExtensions.ClientPlayerState,
 })
 
 function module:Construct()

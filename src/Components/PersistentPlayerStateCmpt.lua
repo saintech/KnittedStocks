@@ -45,6 +45,7 @@ local profileStore = ProfileService.GetProfileStore("PlayerData", Config.InitSta
 local module = Component.new({
 	Tag = "Player",
 	Ancestors = {Players},
+	Extensions = Config.CmptExtensions.PersistentPlayerState,
 })
 
 local function loadProfileAsync(self, player)
