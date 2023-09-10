@@ -57,7 +57,7 @@ local function createService()
 	}
 	local onChangeSignals = {}
 
-	for key, initialValue in pairs(Config.InitState.Server.Global) do
+	for key, initialValue in pairs(Config.InitState.Client.Global) do
 		service.Client[key] = Knit.CreateProperty(initialValue)
 		onChangeSignals[key] = Signal.new()
 		service["Get"..key] = function(self)
